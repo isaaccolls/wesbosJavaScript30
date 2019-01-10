@@ -54,6 +54,7 @@ const ordered2 = inventors.sort((a,b) => a.year > b.year ? 1 : -1);
 console.table(ordered2);
 
 // Array.prototype.reduce()
+// El método reduce() aplica una función a un acumulador y a cada valor de un array (de izquierda a derecha) para reducirlo a un único valor
 // 4. How many years did all the inventors live?
 const totalYears = inventors.reduce((total, inventor) => {
     return total + (inventor.passed - inventor.year);
