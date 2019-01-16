@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript's Capture</title>
+</head>
+<body class="bod">
+
+  <div class="one">
+    <div class="two">
+      <div class="three">
+      </div>
+    </div>
+  </div>
+
+<style>
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after { 
+    box-sizing: inherit; 
+  }
+  div {
+    width: 100%;
+    padding: 100px;
+  }
+  .one {
+    background: thistle;
+  }
+  .two {
+    background: mistyrose;
+  }
+  .three {
+    background: coral;
+  }
+</style>
+
+<button>boton!!</button>
+<script>
+  // bubbling example
+  const divs = document.querySelectorAll('div');
+
+  function  logText(e) {
+    // console.log(this);
+    console.log(this.classList.value);
+    e.stopPropagation(); // stop bubbling!
+
+  }
+
+  divs.forEach(div => div.addEventListener('click', logText, {
+    capture: false // by default it's true
+  }));
+
+  // once example
+  const button = document.querySelector('button');
+  button.addEventListener('click', () => {
+    console.log('click');
+  }, {
+    once: true
+  });
+  // that's like if we have did this:
+  // button.removeEventListener('click', () => {console.log('removed xD')});
+
+</script>
+</body>
+</html>
