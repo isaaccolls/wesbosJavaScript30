@@ -1,0 +1,47 @@
+Arguments: 
+  /usr/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /home/isaac/Android/Sdk/platform-tools/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  8.10.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/isaac/Projects/studying/wesbos/js/21.geolocationBasedSpeedometerAndCompass/package.json: Unexpected token / in JSON at position 177
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:304:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:315:13
+      at <anonymous>
+
+npm manifest: 
+  {
+    "name": "gum",
+    "version": "1.0.0",
+    "description": "",
+    "main": "scripts.js",
+    "scripts": {
+      "start": "rowser-sync start --server --files \"*.html, css/*.css\""
+      // "start": "browser-sync start --directory --server --files \"*.css, *.html, *.js\" --https"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      // "browser-sync": "^2.12.5"
+      "browser-sync": "^1.7.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
