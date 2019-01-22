@@ -4,3 +4,8 @@
 
 ## JS notes
 👽
+
+## Pending to finish
+- 20. Native Speech Recognition
+- 21. Geolocation based Speedometer and Compass
+- 23. Speech Synthesis
